@@ -1,0 +1,51 @@
+@media screen and (min-width: 600px) {
+body {
+	font-family: arial;
+}
+.header {
+	background-color: lightblue;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+}
+.menu {
+	float: left;
+	width: 100px;
+	height: 40px;
+	background-color: teal;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+    text-align: center;
+	border-right: 1px solid black;
+}
+.lastmenu {
+	height: 40px;
+	width: auto;
+	background-color: teal;
+}
+.column1 {
+	float: left;
+	background-color: dimgray;
+	width: 30%;
+	height: 100px;
+}
+.column2 {
+	float: left;
+	background-color: gray;
+	width: 30%;
+	height: 100px;
+}
+.column3 {
+	background-color: darkgray;
+	width: auto;
+	height: 100px;
+}
+.footer {
+	clear: both;
+	width: auto;
+	color: white;
+	background-color: teal;
+	height: 40px;
+	text-align: center;
+}

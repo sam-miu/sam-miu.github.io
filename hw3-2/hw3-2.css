@@ -1,0 +1,71 @@
+@media screen and (min-width: 600px) {
+body {
+	font-family: arial;
+}
+.header {
+	background-color: lightblue;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+.container2 {
+    display: flex;
+    width: 100%;
+}
+.menu {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	background-color: teal;
+    text-align: center;
+	border-right: 1px solid black;
+}
+.lastmenu {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	background-color: teal;
+    text-align: center;
+	border-right: 1px solid black;
+}
+.column1 {
+	display: block;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: dimgray;
+	height: 100px;
+}
+.column2 {
+	flex: 1;
+	display: flex;
+	background-color: gray;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+.column3 {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: darkgray;
+	height: 100px;
+}
+.footer {
+	display: block;
+	width: auto;
+	color: white;
+	background-color: teal;
+	height: 40px;
+	text-align: center;
+}
