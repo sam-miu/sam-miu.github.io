@@ -1,0 +1,137 @@
+function testValidator(param, expected) {
+	if (param === expected) {
+   return "TEST SUCCEED";
+  }
+  return "TEST FAILED";
+}
+
+function max(number1, number2) {
+  if (number1 > number2) {
+    return number1;
+  } else {
+    return number2;
+  }
+}
+
+let number1 = 55;
+let number2 = 10;
+let re1 = max(number1, number2);
+console.log(re1);
+console.log(testValidator(re1, 55));
+number1 = 75;
+number2 = 100;
+re1 =  max(number1, number2);
+console.log(re1);
+console.log(testValidator(re1, 100));
+
+function maxOfThree(number1, number2, number3) {
+  let max = 0;
+  if (max < number1) {
+    max = number1;
+  } 
+  if (max < number2) {
+    max = number2;
+  } 
+  if (max < number2) {
+    max = number3;
+  } 
+  return max;
+}
+
+let num1 = 1;
+let num2 = 17;
+let num3 = 3;
+let re2 = maxOfThree(num1, num2, num3);
+console.log(re2);
+console.log(testValidator(re2, 17));
+num1 = 33;
+num2 = 65;
+num3 = 3;
+re2 = maxOfThree(num1, num2, num3);
+console.log(re2);
+console.log(testValidator(re2, 65));
+
+function isVowel(char) {
+	if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+  	return true;
+  }
+  return false;
+}
+
+let char = 'e';
+let re3 = isVowel(char);
+console.log(re3);
+console.log(testValidator(re3, true));
+
+function sum(numbers) {
+  const mappedNumbers = numbers.map(Number);
+  return mappedNumbers.reduce((total, value) => total + value, 0);
+}
+
+const numbers = [1, 3, 5, 9];
+let re4 = sum(numbers);
+console.log(re4);
+console.log(testValidator(re4, 18));
+
+function multiplies(numbers) {
+  const mappedNumbers = numbers.map(Number);
+  return mappedNumbers.reduce((total, value) => total * value, 1);
+}
+
+const numbers2 = [3, 3, 3];
+let re5 = multiplies(numbers2);
+console.log(re5);
+console.log(testValidator(re5, 27));
+
+function reverse(myString) {
+  return myString.split("").reverse().join("");
+}
+
+const myString = "jag testar";
+let re6 = reverse(numbers2)
+console.log(re6); 
+console.log(testValidator(re6, "ratset gaj"));
+
+function findLongestWord(words) { 
+  let longest = words.map(word => word.length)
+  .reduce((max, length) => Math.max(max, length), 0);
+  return longest;
+}
+
+const words = ["Apple", "B", "Zoo"];
+let re7 = findLongestWord(words);
+console.log(re7);
+console.log(testValidator(re7, 5));
+
+function filterLongWords(words, i) { 
+	if (words.length <= 0) {
+  	return [""];
+  } else {
+  	const longerThanIWords =  words.filter(sub => sub.length > i);
+    return longerThanIWords;
+  }
+}
+
+const words2 = ["Jump", "Run", "Walk", "M", "", "Banana", "GG"];
+let re8 = filterLongWords(words2, 2);
+console.log(re8);
+console.log(testValidator(re8, ["Jump", "Run", "Walk", "Banana"]));
+
+const a = [1,3,5,3,3]; 
+const b = a.map(function(elem, i, array) {
+  return elem * 10;
+})
+console.log(b);
+const c = a.filter(function(elem, i, array){
+  return elem == 3;});
+console.log(c);
+const d = a.reduce(function(prevValue, elem, i, array){
+  return prevValue + elem;
+});
+console.log(d);
+
+const d2 = a.filter(function(elem, i, array){
+  return elem != null;}); //All
+const d3 = a.findIndex(function(elem) {return elem > 1;}); //1
+console.log(d2);
+console.log(d3);
