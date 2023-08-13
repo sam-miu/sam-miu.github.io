@@ -1,0 +1,29 @@
+h1 {
+  color: orange;
+}
+h3 {
+  color: green;
+}
+body {
+  font-family: courier;
+  font-size: 120%;
+  background-color: cyan;
+}
+ol { 
+    display: flex;
+    flex-direction: column-reverse;
+}
+li {
+    flex: 0 0 auto;
+}
+a {
+  text-decoration:none;
+}
+.myDropcap {
+  font-size: 35px;
+  line-height: 1.4em;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 1 8px;
+  color: blue;
+}
