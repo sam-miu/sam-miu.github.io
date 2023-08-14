@@ -75,18 +75,33 @@
    </body>
    <script>
    $(document).ready(function() {
+      //Select all required elements and each `label` of the element, then append the span element
+      //Add `required` class to it
       $('[required="required"]').prev('label').append( '<span>*</span>').children( 'span').addClass('required'); $('tbody tr:even').addClass('even');
+
+      //Find element with id #btnAddTask, then eliminate its default behavior
+      //Call element with id #taskCreation to remove class `not`
       $('#btnAddTask').click(function(evt) {
          evt.preventDefault();
          $('#taskCreation').removeClass('not');
       });
+
+      //Select all tbody and tr elements to attach click event
+      //Then find the closet `td` to toggle the class `rowHighlight`
       $('tbody tr').click(function(evt) {
         $(evt.target).closest('td' ).siblings( ).andSelf( ).toggleClass( 'rowHighlight');
       });
+
+      //Select element with id #tblTasks and all tbody elements, then eliminate its default behavior
+      //Find the `tr` parent, then remove its element
       $('#tblTasks tbody').on('click', '.deleteRow', function(evt) {
          evt.preventDefault();
          $(evt.target).parents('tr').remove();
       });
+
+      //Select element with id #saveTask, then eliminate its default behavior
+      //Trigger jQuery Plugin function toObject()
+      //Then use element with id #taskRow to append the content from the task result
       $('#saveTask').click(function(evt) {
          evt.preventDefault();
          var task = $('form').toObject();
